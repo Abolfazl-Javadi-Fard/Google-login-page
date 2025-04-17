@@ -52,7 +52,7 @@ btnNext.addEventListener('click', (e)=>{
             signIn.textContent = 'Welcom';
             gmailAccount.classList.add('changeName');
             gmailAccount.innerHTML = `<i class="fa-solid fa-circle-user"></i> ${UserGmail.value} <i class="fa-solid fa-caret-down"></i>`;
-        },0 );
+        },1450 );
     }else{
         console.log('not valid')
         email_form.insertAdjacentHTML("afterend",brElem)
