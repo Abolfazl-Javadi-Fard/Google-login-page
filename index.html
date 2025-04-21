@@ -1,48 +1,56 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" >
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gmail</title>
-    <link rel="stylesheet" href="./css/style.css">
+    <title>دیزاین جدید 2</title>
+
+    <link rel="stylesheet" href="css/mobile.css" media="(max-width: 407px)">
+    <link rel="stylesheet" href="css/tablet.css" media="(min-width: 407px) and (max-width: 600px)">
+    <link rel="stylesheet" href="css/desktop.css" media="(min-width: 600px) and (max-width: 642px)">
+    <link rel="stylesheet" href="css/larg-desktop.css" media="(min-width: 642px) and (max-width: 960px)">
+    <link rel="stylesheet" href="css/heuge-descktop.css" media="(min-width: 960px)">
+    
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.17.0/xlsx.full.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/2.0.5/FileSaver.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
-    
-</head> 
+
+    </head>
 <body>
     <div class="main">
         <div class="wrapper">
             <div class="inner__wrapper">
-                <img src="images/logo.png" alt="logo" width="75" height="24">
-                <h2 id="signIn">Sign in</h2>
-                <h3 id="gmailAccount" class="gmailAccount">Sign in with your Google Account to get your bookmarks, history, passwords, and other settings on all your devices.</h3>
-                <div id="g_id_onload"
-                    data-client_id="YOUR_CLIENT_ID"
-                    data-callback="handleGoogleSignIn"
-                    data-auto_prompt="false">
-            </div>
+                <div class="title">
+                    <figure><img src="images/Google_Icons.webp" alt="logo" width="65" height="65"></figure>
+                    <p class="h2_handler"><h2 id="signIn">Sign in<h2></p>
+                    <h3 id="gmailAccount" class="gmailAccount">with your Google Account to continue to Gmail. This account will be available to other Google apps in the browser.</h3>
+                    <div id="g_id_onload"
+                         data-client_id="YOUR_CLIENT_ID"
+                         data-callback="handleGoogleSignIn"
+                         data-auto_prompt="false">
+                    </div>
+                </div>
                 <form action="####" id="form">
                     <div class="form-wrapper username">
-
-                        <div class="form__group">
-                            <input type="text" name="email" id="email" required>
-                            <label for="email" class="email-label">Email or phone</label>
-                        </div>
-                        <div><a href="html-files/Create-Google-Account.html" class="forgot"> Forgot email?</a></div>
-
-
-                        <p>Not your computer? Use Guest mode to sign in privately. 
-                            <br><a href="#">Learn more about using Guest mode</a>
-                        </p>
-
-
-                        <ul class="control">
-                            <li><a href="html-files/Create-Google-Account.html">Create account</a></li>
-                            <li><button class="btn" id="btnNext">Next</button></li>
-                        </ul>
+                        
+                            
+                                <div class="form__group">
+                                    <input type="text" name="email" id="email" required>
+                                    <label for="email" class="email-label">Email or phone</label>
+                                </div>
+                                <div><a href="html-files/Create-Google-Account.html" class="forgot"> Forgot email? </a></div>
+        
+        
+                                <p>Not your computer? Use Guest mode to sign in privately.
+                                    <br><a href="#">Learn more about using Guest mode</a>
+                                </p>
+        
+        
+                                <ul class="control">
+                                    <li><a href="html-files/Create-Google-Account.html">Create account</a></li>
+                                    <li><button class="btn" id="btnNext">Next</button></li>
+                                </ul>
                     </div>
                     <div class="form-wrapper password">
                         <div class="form__group">
@@ -62,13 +70,17 @@
                         </ul>
                     </div>
                 </form>
+                <!-- ////////////---------------- -->
             </div>
             <div class="language">
-                <select name="" id="">
-                    <option value="english">English (United States)</option>
-                    <option value="russion">Russion</option>
-                    <option value="deutsch">Deutsch</option>
-                </select>
+                <div>
+                    <select name="" id="">
+                        <option value="english">English (United States)</option>
+                        <option value="russion">Russion</option>
+                        <option value="deutsch">Deutsch</option>
+                    </select>
+                    <span class="caret-down"></span>
+                </div>
                 <ul class="privacy">
                     <li><a href="#">Help</a></li>
                     <li><a href="#">Privacy</a></li>

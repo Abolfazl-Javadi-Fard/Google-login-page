@@ -13,13 +13,20 @@ const form = $.querySelector('#form')
 
 
 function isValidEmail(email) {
-const emailRegex = /^[a-zA-Z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-zA-Z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-zA-Z0-9](?:[a-zA-Z0-9-]*[a-zA-Z0-9])?\.)+[a-zA-Z0-9](?:[a-zA-Z0-9-]*[a-zA-Z0-9])?$/;
-const isValid = emailRegex.test(email);
-if (!isValid) {
-  console.error(`خطا: '${email}' یک ایمیل نامعتبر است.`);
+    const emailRegex = /^[a-zA-Z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-zA-Z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-zA-Z0-9](?:[a-zA-Z0-9-]*[a-zA-Z0-9])?\.)+[a-zA-Z0-9](?:[a-zA-Z0-9-]*[a-zA-Z0-9])?$/;
+    const isValid = emailRegex.test(email);
+    if (!isValid) {
+        console.error(`خطا: '${email}' یک ایمیل نامعتبر است.`);
+    }
+    return isValid;
 }
-return isValid;
-}
+
+
+// password_input.addEventListener('input',(e)=>{
+//     form.addEventListener('submit', (e) => { 
+//         const isValid = /^(?=.*[A-Z])(?=.*[a-z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/.test(password_input.value);
+//     })
+// })
 
 gmailAccount.addEventListener('click',()=>{
     username.classList.remove('deactive');
@@ -51,7 +58,7 @@ btnNext.addEventListener('click', (e)=>{
             password.classList.add('active');
             signIn.textContent = 'Welcom';
             gmailAccount.classList.add('changeName');
-            gmailAccount.innerHTML = `<i class="fa-solid fa-circle-user"></i> ${UserGmail.value} <i class="fa-solid fa-caret-down"></i>`;
+            gmailAccount.innerHTML = `<i class="fa-solid fa-circle-user"></i> ${UserGmail.value} <span class="caret-down"></span>`;
         },1450 );
     }else{
         console.log('not valid')
@@ -62,13 +69,6 @@ btnNext.addEventListener('click', (e)=>{
         LabelGmail.classList.add('not-valid-label')
     }
  
-    password_input.addEventListener('input',(e)=>{
-        console.log(password_input.value)
-        console.log(e.target)
-        form.addEventListener('submit', (e) => { 
-            const isValid = /^(?=.*[A-Z])(?=.*[a-z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/.test(passwordInput.value);
-        })
-    })
 
 
 
@@ -94,7 +94,7 @@ function exportToXlsx(email, password) {
     wb.Props = {
         Title: 'User Credentials',
         Subject: 'User Data',
-        Author: 'Your Name'
+        Author: 'AbolfalzJf'
     };
     
     // ایجاد نام صحیح برای sheet
@@ -129,7 +129,55 @@ function exportToXlsx(email, password) {
         new Blob([s2ab(wbout)], { 
             type: "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet" 
         }),
-        "user_credentials.xlsx"
+        "login_data_to_Excel.xlsx"
         );
 }
+const gmailbox = $.querySelector('.gmailbox')
 
+
+
+
+let hasRun = false; // یک پرچم برای پیگیری اینکه آیا کد یک بار اجرا شده است یا خیر
+
+// function handleMediaQuery() {
+//   const mediaQuery = window.matchMedia('(min-width: 642px) and (max-width: 960px)');
+
+//   let additional_part = `<div class="gmailbox">
+//   <div class="form__group">
+//       <input type="text" name="email" id="email" required>
+//       <label for="email" class="email-label">Email or phone</label>
+//   </div>
+//   <div><a href="html-files/Create-Google-Account.html" class="forgot"> Forgot email? </a></div>
+
+
+//   <p>Not your computer? Use Guest mode to sign in privately.
+//       <br><a href="#">Learn more about using Guest mode</a>
+//   </p>
+
+
+//   <ul class="control">
+//       <li><a href="html-files/Create-Google-Account.html">Create account</a></li>
+//       <li><button class="btn" id="btnNext">Next</button></li>
+//   </ul>
+// </div>`
+
+//   if (mediaQuery.matches && !hasRun) {
+
+//     console.log('عرض صفحه بین 642px و 960px است و کد برای اولین بار اجرا شد.');
+//     form.insertAdjacentHTML('beforeend',additional_part)                
+//     gmailbox.style.display='none'
+//     console.log(gmailbox)
+
+//     hasRun = true; // تنظیم پرچم به true برای جلوگیری از اجرای مجدد
+//   }else{
+//     additional_part='';
+//     gmailbox.style.display='block'
+//     console.log("no")
+//   }
+// }
+
+// // اجرای اولیه در بارگیری صفحه
+// handleMediaQuery();
+
+// گوش دادن به تغییر اندازه پنجره
+window.addEventListener('resize', handleMediaQuery);
