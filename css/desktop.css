@@ -8,7 +8,7 @@
 
 .inner__wrapper {
   border-radius: 8px;
-  overflow: visible;
+  overflow: hidden;
   background-color: #fbffff;
   display: flex;
   flex-direction: row;
