@@ -37,10 +37,8 @@ body {
 }
 
 .inner__wrapper {
-  border-radius: 8px;
-  overflow: visible;
-  /* width: 100vw; */
-  background-color: #fbffff;
+  overflow: hidden;
+  background-color: transparent;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -67,8 +65,7 @@ figure img {
   width: max-content;
   margin: 0.5rem auto 3rem auto;
   border-radius: 3rem;
-  font-size: 13px !important;
-  font-weight: bold;
+  font-size: 16px !important;
   font-family: "google sans";
   cursor: pointer;
 }
@@ -229,6 +226,7 @@ a:nth-child(2):hover::after {
   font-size: 13px;
   margin-bottom: 3rem;
   appearance: none;
+  background-color: transparent;
 }
 .caret-down {
   width: 0;
@@ -258,7 +256,7 @@ a:nth-child(2):hover::after {
 .username,
 .password {
   transition: 0.5s ease-in-out;
-  width: 87vw;
+  width: 86vw;
 }
 form .username {
   margin-right: 20px;
@@ -267,7 +265,7 @@ form .username {
   transform: translateX(-120%);
 }
 .password.active {
-  transform: translateX(-93vw);
+  transform: translateX(-91vw);
 }
 
 .show-password-checkbox {

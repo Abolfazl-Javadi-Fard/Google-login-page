@@ -28,7 +28,6 @@ body {
 .main {
   display: flex;
   flex-direction: column;
-  height: 100vh;
   justify-content: flex-start;
 }
 
@@ -109,6 +108,7 @@ form {
   width: 211%;
   grid-gap: 3rem;
   margin-top: 40px;
+
 }
 
 form .form__group {
@@ -245,6 +245,7 @@ a:nth-child(2):hover::after {
   color: #484b4d;
   font-size: 13px;
   margin-bottom: 3rem;
+  background-color: transparent;
   appearance: none;
 }
 
