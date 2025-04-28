@@ -1,28 +1,8 @@
-@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
-@import url("https://cdn.jsdelivr.net/gh/mortezaom/google-sans-cdn@master/fonts.css");
-
 :root {
   --primary-color: #1a73e8;
-  --secondary-color: rgb(91, 94, 93);
+  --secondary-color: #f0f4f9;
+  --secondary-color-d: #252525;
   --secondary-color-dark: #1a66cb;
-}
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  text-decoration: none;
-  list-style: none;
-}
-
-html {
-  font-size: 10px;
-}
-
-body {
-  font-family: "Roboto";
-  font-size: 1.4rem;
-  line-height: 1.6;
-  color: #2b2b2b;
 }
 
 /* اکیه */
@@ -31,47 +11,32 @@ body {
   flex-direction: column;
   height: 100vh;
   justify-content: flex-start;
+  /* padding:auto 7rem auto 10rem; */
+  background-color: var(--secondary-color);
   /* align-items: center; */
 }
 
 .wrapper {
-  padding: 25px;
+  padding: 4rem 10%;
   height: 100%;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: center;
+  align-items: center;
 }
- 
 
 .inner__wrapper {
-  /* padding: 4.5rem 4rem; */
+  padding: 3rem 3rem;
   /* border: 1px solid var(--secondary-color); */
   /* padding: rem; */
-  border-radius: 8px;
+  border-radius: 30px;
   overflow: hidden;
-  /* width: 90%; */
+  width: 90%;
   background-color: #fbffff;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   justify-content: flex-start;
-}
-
-figure {
-  /* border: 1px solid #000; */
-  padding: 0;
-  margin: 0;
-  overflow: hidden;
-  width: 45px;
-  height: 45px;
-  margin-left: 2px;
-}
-
-figure img{
-  position: relative;
-  top: -10px;
-  left: -12px;
-
 }
 
 .changeName {
@@ -86,51 +51,18 @@ figure img{
   cursor: pointer;
 }
 
-.changeName:hover {
-  background-color: rgb(246, 246, 246);
-}
-
-.inner__wrapper img {
-  display: block;
-  margin: 0 auto 1rem;
-}
-
-.inner__wrapper h2 {
-  font-family: "google sans";
-  font-size: 3.2rem;
-  margin-top: 20px;
-  font-weight: 400;
-  margin-left: -1px;
-}
-
-.inner__wrapper h3 {
-  font-weight: 100;
-  margin-top: 10px;
-  font-size: 16px;
-  line-height: 22px;
-  word-spacing:2px;
-  /* text-decoration: dashed; */
-}
-.fa-solid {
-  margin: 0px 3px;
-  color: rgb(65, 65, 65);
-}
-
 form {
   display: grid;
   grid-template-columns: 1fr 1fr;
   width: 211%;
   grid-gap: 3rem;
-  margin-top: 40px;
-}
-
-form .form__group {
-  height: 6.5rem;
+  margin-top: 0px;
 }
 
 form .form__group input {
   padding: 1.8rem;
-  border: 0.5px solid var(--secondary-color);
+  margin-top: 20px;
+  border: 0.5px solid var(--secondary-color-d);
   display: block;
   width: 93%;
   outline: none;
@@ -138,95 +70,22 @@ form .form__group input {
   font-size: 1.8rem;
 }
 
-form .form__group label {
-  display: block;
-  transform: translate(1.5rem, -4.1rem);
-  font-size: 1.6rem;
-  pointer-events: none;
-  transition: 0.2s ease;
-  color: #727272;
-}
-
-
-form .form__group input:focus {
-  border: 2px solid var(--secondary-color-dark);
-}
-
-form .form__group input:focus + label {
-  transform: translate(2rem, -7.2rem);
-  color: var(--secondary-color-dark);
-  display: inline-block;
-  font-size: 1.3rem;
-  padding: 0.3rem;
-  background-color: #fff;
-  line-height: 30%;
-}
-
 form .form__group input:valid {
-  border: 2px solid var(--secondary-color);
-}
-
-.not-valid-input {
-  border: 2px solid #b62f29 !important;
-}
-.not-valid-label {
-  color: #b62f29 !important;
-}
-.error-massage {
-  font-size: 12px;
-  color: #b62f29;
-  position: relative;
-  top: 0px;
-  left: -60px;
-}
-.error-massage .fa-solid {
-  color: #b62f29;
-}
-
-form .form__group input:valid + label {
-  transform: translate(2rem, -7.2rem);
-  display: inline-block;
-  font-size: 1.2rem;
-  background-color: #fff;
-  color: #505050;
-}
-
-a {
-  color: var(--secondary-color-dark);
-  /* font-weight: bold; */
-}
-a:nth-child(2):hover::after {
-  content: "";
-  display: block;
-  width: 230px;
-  position: absolute;
-  background-color: #1a6bd5;
+  border: 2px solid var(--secondary-color-d);
 }
 
 .forgot {
   display: block;
-  margin-bottom: 4rem;
+  margin-bottom: 2rem;
 }
 
 .control {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin:4rem 0;
+  margin: 1rem 0rem 0rem 0rem;
 }
 
-.control li a:first-child {
-  /* font-family: "google sans"; */
-  font-weight: normal;
-  padding: 5px;
-  position: relative;
-  left: -5px;
-}
-
-.control li a:first-child:hover {
-  background-color: #1a6bd50f;
-  border-radius: 3px;
-}
 .btn {
   background-color: var(--secondary-color-dark);
   color: #fff;
@@ -241,90 +100,37 @@ a:nth-child(2):hover::after {
   margin-right: 22px;
 }
 
-.btn:hover {
-  cursor: pointer;
-  box-shadow: rgba(0, 0, 0, 0.2) 0px 4px 6px -1px,
-    rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
-  background-color: var(--secondary-color-dark);
-}
-
 .language {
   display: flex;
-  justify-content: space-between;
   flex-direction: row;
+  justify-content: space-between;
   height: 20px;
-  /* margin: 1rem 0; */
+  width: 80%;
+  margin: 1rem 0;
 }
 
-.language select {
+.language div select {
   border: none;
   font-family: "google sans";
   color: #484b4d;
+  background-color: transparent;
   font-size: 13px;
-  margin-bottom: 3rem ;
+  margin-bottom: 3rem;
   appearance: none;
 }
 
-.caret-down {
-  width: 0;
-  height: 0;
-  border-left: 5px solid transparent; /* بوردر سمت چپ (لبه‌ی مورب) */
-  border-right: 5px solid transparent; 
-  border-top: 5px solid #333; /* بوردر بالا (بدنه‌ی فلش) - رنگ و ضخامت دلخواه */
-  position: relative;
-  top: 12px;
-  left: 15px;
-}
-
-.language select:focus-visible{
-  outline: none;
-  border: none;
-}
-.language .privacy {
-  font-size: 1.2rem;
-  display: flex;
-}
-
 .language .privacy li {
-  margin-left: 2.5rem;
-}
-
-.language .privacy li a {
-  font-weight: 400;
-  color: #757575;
+  margin: 0px 0rem 0px 2rem;
 }
 
 .username,
 .password {
   transition: 0.5s ease-in-out;
-}
-
-.username.deactive {
-  transform: translateX(-120%);
+  width: 65vw;
 }
 
 .password.active {
-  transform: translateX(-104%);
-
-}
-
-.show-password-checkbox {
-  display: inline-flex;
-  align-items: center;
-  cursor: pointer;
-  position: relative;
-  gap: 8px;
-}
-
-/* مخفی کردن چکباکس پیش‌فرض */
-.show-password-checkbox input {
-  position: absolute;
-  opacity: 0;
-  cursor: pointer;
-  height: 0;
-  width: 0;
-  position: relative;
-  top: 10px;
+  transform: translateX(-107%);
 }
 
 /* ایجاد چکباکس سفارشی */
@@ -333,50 +139,7 @@ a:nth-child(2):hover::after {
   width: 20px;
   height: 20px;
   background-color: #fff;
-  border: 2px solid var(--secondary-color);
+  border: 2px solid var(--secondary-color-d);
   border-radius: 2px;
   margin-right: 10px;
 }
-
-/* حالت فعال (checked) */
-.show-password-checkbox input:checked ~ .checkmark {
-  background-color: var(--secondary-color-dark);
-  border-color: var(--secondary-color-dark);
-}
-
-/* ایجاد علامت چک */
-.checkmark::after {
-  content: "";
-  position: absolute;
-  display: none;
-  left: 15px;
-  top: 3px;
-  width: 5px;
-  height: 10px;
-  border: solid white;
-  border-width: 0 2px 2px 0;
-  transform: rotate(45deg);
-  z-index: 1;
-}
-.checkmark::before {
-  content: "";
-  position: absolute;
-  display: none;
-  left: -2px;
-  top: -9px;
-  width: 40px;
-  height: 40px;
-  border-radius: 100%;
-  background-color: #1a6bd50f;
-  border-width: 0 2px 2px 0;
-  transform: rotate(45deg);
-}
-
-/* نمایش علامت چک هنگام فعال بودن */
-.show-password-checkbox input:checked ~ .checkmark::after {
-  display: block;
-}
-.show-password-checkbox input:hover ~ .checkmark::before {
-  display: block;
-}
-

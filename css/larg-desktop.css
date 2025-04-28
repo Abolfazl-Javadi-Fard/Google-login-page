@@ -1,228 +1,132 @@
-@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
-@import url("https://cdn.jsdelivr.net/gh/mortezaom/google-sans-cdn@master/fonts.css");
-
 :root {
   --primary-color: #1a73e8;
-  --secondary-color: rgb(91, 94, 93);
+  --secondary-color: #f0f4f9;
+  --secondary-color-d: #252525;
   --secondary-color-dark: #1a66cb;
 }
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  text-decoration: none;
-  list-style: none;
-}
 
-html {
-  font-size: 10px;
-}
-
-body {
-  font-family: "Roboto";
-  font-size: 1.4rem;
-  line-height: 1.6;
-  color: #2b2b2b;
-}
-
-/* اکیه */
 .main {
   display: flex;
   flex-direction: column;
   height: 100vh;
-  justify-content: flex-start;
-  /* align-items: center; */
+  justify-content: center;
+  background-color: var(--secondary-color);
 }
 
 .wrapper {
-  padding: 25px;
   height: 99.5%;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: center;
 }
- 
 
 .inner__wrapper {
-  /* padding: 4.5rem 4rem; */
-  /* border: 1px solid var(--secondary-color); */
-  /* padding: rem; */
-  border-radius: 8px;
+  /* min-width: 970px; */
+  margin: 4rem 13%;
+  border-radius: 30px;
   overflow: hidden;
-  /* width: 90%; */
+  height: 384px;
   background-color: #fbffff;
   display: flex;
   flex-direction: row;
   align-items: flex-start;
   justify-content: flex-start;
 }
+.inner__wrapper img {
+  margin: 0;
+}
 
+.inner__wrapper h2 {
+  width: 35vw;
+}
 
 figure {
-  /* border: 1px solid #000; */
   padding: 0;
   margin: 0;
   overflow: hidden;
-  width: 45vw;
+  width: 45px;
   height: 45px;
   margin-left: 2px;
-}
-
-figure img{
-  position: relative;
-  top: -10px;
-  left: -12px;
-
 }
 
 .changeName {
   padding: 0.5rem 2.5rem 0.5rem 0.5rem;
   border: 1px solid #b5b5b5;
   width: max-content;
-  /* margin: 0.5rem auto 3rem auto; */
   border-radius: 3rem;
   font-size: 16px !important;
-  /* font-weight: bold; */
   font-family: "google sans";
   cursor: pointer;
+  margin: 0px;
 }
 
-.changeName:hover {
-  background-color: rgb(246, 246, 246);
-}
-
-
-.inner__wrapper h2 {
-  font-family: "google sans";
-  font-size: 3.2rem;
-  margin-top: 20px;
-  font-weight: 400;
-  margin-left: -1px;
-}
-
-.inner__wrapper h3 {
-  font-weight: 100;
-  margin-top: 10px;
-  font-size: 16px;
-  line-height: 22px;
-  word-spacing:2px;
-  /* text-decoration: dashed; */
-}
-.fa-solid {
-  margin: 0px 3px;
-  color: rgb(65, 65, 65);
-}
-.title{
-  height: 500px;
+.title {
+  height: 100%;
+  width: 50%;
+  padding: 3rem;
   position: relative;
   z-index: 2;
   background-color: white;
+  border-radius: 30px;
 }
-form{
+form {
   display: flex;
   flex-direction: row;
+  grid-gap: 0;
+  position: relative;
+  margin-top: 11rem;
 }
-form .form-wrapper{
+form .form-wrapper {
   display: flex;
   flex-direction: column;
-  width:45vw ;
   justify-content: space-between;
-  margin: 90px 25px;
+  /* padding: 0px 0px 0px 3rem; */
+  transition: 0.5s ease-in-out;
+  position: absolute;
+  width: 100%;
+  padding: 0 3rem;
+  /* box-sizing: border-box; جلوگیری از اضافه شدن padding به عرض */
 }
-
-form .form__group {
-  height: 6.5rem;
+form .username {
+  /* padding-right: 3rem; */
+}
+form .password {
+  left: 100%;
 }
 
 form .form__group input {
   padding: 1.8rem;
-  border: 0.5px solid var(--secondary-color);
+  border: 0.5px solid var(--secondary-color-d);
   display: block;
-  width: 93%;
+  width: 100%;
   outline: none;
   border-radius: 0.3rem;
   font-size: 1.8rem;
 }
 
-form .form__group label {
-  display: block;
-  transform: translate(1.5rem, -4.1rem);
-  font-size: 1.6rem;
-  pointer-events: none;
-  transition: 0.2s ease;
-  color: #727272;
-}
-
-
-form .form__group input:focus {
-  border: 2px solid var(--secondary-color-dark);
-}
-
-form .form__group input:focus + label {
-  transform: translate(2rem, -7.2rem);
-  color: var(--secondary-color-dark);
-  display: inline-block;
-  font-size: 1.3rem;
-  padding: 0.3rem;
-  background-color: #fff;
-  line-height: 30%;
-}
-
 form .form__group input:valid {
-  border: 2px solid var(--secondary-color);
+  border: 2px solid var(--secondary-color-d);
 }
 
-.not-valid-input {
-  border: 2px solid #b62f29 !important;
-}
-.not-valid-label {
-  color: #b62f29 !important;
-}
-.error-massage {
-  font-size: 12px;
-  color: #b62f29;
+/* .error-massage{
   position: relative;
-  top: 0px;
-  left: -60px;
-}
-.error-massage .fa-solid {
-  color: #b62f29;
-}
-
-form .form__group input:valid + label {
-  transform: translate(2rem, -7.2rem);
-  display: inline-block;
-  font-size: 1.2rem;
-  background-color: #fff;
-  color: #505050;
-}
-
-a {
-  color: var(--secondary-color-dark);
-  /* font-weight: bold; */
-}
-a:nth-child(2):hover::after {
-  content: "";
-  display: block;
-  width: 230px;
-  position: absolute;
-  background-color: #1a6bd5;
-}
+    top: -20px;
+    left: 0px;
+} */
 
 .forgot {
   display: block;
-  margin-bottom: 4rem;
+  margin-bottom: 3rem;
 }
 
 .control {
   display: flex;
   align-items: center;
   justify-content: flex-end;
-  margin:2rem 0;
+  margin: 2rem 0;
 }
 
 .control li a:first-child {
-  /* font-family: "google sans"; */
   font-weight: normal;
   padding: 5px;
   position: relative;
@@ -230,10 +134,6 @@ a:nth-child(2):hover::after {
   margin-right: 30px;
 }
 
-.control li a:first-child:hover {
-  background-color: #1a6bd50f;
-  border-radius: 3px;
-}
 .btn {
   background-color: var(--secondary-color-dark);
   color: #fff;
@@ -244,15 +144,6 @@ a:nth-child(2):hover::after {
   font-size: 1.4rem;
   outline: none;
   transition: box-shadow ease 200ms;
-  /* transition: background-color 0s filter 0s; */
-  margin-right: 22px;
-}
-
-.btn:hover {
-  cursor: pointer;
-  box-shadow: rgba(0, 0, 0, 0.2) 0px 4px 6px -1px,
-    rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
-  background-color: var(--secondary-color-dark);
 }
 
 .language {
@@ -260,59 +151,36 @@ a:nth-child(2):hover::after {
   justify-content: space-between;
   flex-direction: row;
   height: 20px;
-  /* margin: 1rem 0; */
+  /* margin: 1.5rem 1rem; */
+  margin: 0.5rem 13%;
 }
 
 .language select {
   border: none;
   font-family: "google sans";
+  background-color: transparent;
   color: #484b4d;
   font-size: 13px;
-  margin-bottom: 3rem ;
+  margin-bottom: 3rem;
   appearance: none;
 }
 
-.caret-down {
-  width: 0;
-  height: 0;
-  border-left: 5px solid transparent; /* بوردر سمت چپ (لبه‌ی مورب) */
-  border-right: 5px solid transparent; 
-  border-top: 5px solid #333; /* بوردر بالا (بدنه‌ی فلش) - رنگ و ضخامت دلخواه */
-  position: relative;
-  top: 12px;
-  left: 15px;
-}
-
-.language select:focus-visible{
-  outline: none;
-  border: none;
-}
-.language .privacy {
-  font-size: 1.2rem;
-  display: flex;
-}
-
 .language .privacy li {
-  margin-left: 2.5rem;
+  margin: 0px 0rem 0px 2rem;
 }
 
-.language .privacy li a {
-  font-weight: 400;
-  color: #757575;
-}
-
-.username,
-.password {
-  transition: 0.5s ease-in-out;
+/* مخفی کردن بخش رمز عبور به صورت پیش‌فرض */
+.form-wrapper .password {
+  display: none;
 }
 
 .username.deactive {
-  transform: translateX(-220%);
+  left: 20%;
 }
 
-.password.active {
-  transform: translateX(-115%);
-
+.form-wrapper.password.active {
+  left: 110%;
+  display: block;
 }
 
 .show-password-checkbox {
@@ -320,71 +188,16 @@ a:nth-child(2):hover::after {
   align-items: center;
   cursor: pointer;
   position: relative;
-  top: -45px;
+  top: 0px;
   gap: 8px;
 }
 
-/* مخفی کردن چکباکس پیش‌فرض */
-.show-password-checkbox input {
-  position: absolute;
-  opacity: 0;
-  cursor: pointer;
-  height: 0;
-  width: 0;
-  position: relative;
-  top: 10px;
-}
-
-/* ایجاد چکباکس سفارشی */
 .checkmark {
   display: inline-block;
   width: 20px;
   height: 20px;
   background-color: #fff;
-  border: 2px solid var(--secondary-color);
+  border: 2px solid var(--secondary-color-d);
   border-radius: 2px;
   margin-right: 10px;
 }
-
-/* حالت فعال (checked) */
-.show-password-checkbox input:checked ~ .checkmark {
-  background-color: var(--secondary-color-dark);
-  border-color: var(--secondary-color-dark);
-}
-
-/* ایجاد علامت چک */
-.checkmark::after {
-  content: "";
-  position: absolute;
-  display: none;
-  left: 15px;
-  top: 3px;
-  width: 5px;
-  height: 10px;
-  border: solid white;
-  border-width: 0 2px 2px 0;
-  transform: rotate(45deg);
-  z-index: 1;
-}
-.checkmark::before {
-  content: "";
-  position: absolute;
-  display: none;
-  left: -2px;
-  top: -9px;
-  width: 40px;
-  height: 40px;
-  border-radius: 100%;
-  background-color: #1a6bd50f;
-  border-width: 0 2px 2px 0;
-  transform: rotate(45deg);
-}
-
-/* نمایش علامت چک هنگام فعال بودن */
-.show-password-checkbox input:checked ~ .checkmark::after {
-  display: block;
-}
-.show-password-checkbox input:hover ~ .checkmark::before {
-  display: block;
-}
-
