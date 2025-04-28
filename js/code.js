@@ -1,4 +1,3 @@
-// const $ = document;
 const $ = (selector) => document.querySelector(selector);
 const nextButton = $("#btnNext");
 const usernameSection = $(".username");
@@ -28,14 +27,13 @@ gmailAccountText.addEventListener("click", () => {
 });
 
 showPasswordCheckbox.addEventListener("input", () => {
-    elements.passwordInput.type = elements.showPasswordCheckbox.checked ? "text" : "password";
+    passwordInput.type = showPasswordCheckbox.checked ? "text" : "password";
   });
 
 nextButton.addEventListener("click", (e) => {
   e.preventDefault();
   let isValid = validateEmail(emailInput.value);
-  const errorMessage = ` <span class="error-massage"><i class="fa-solid fa-circle-exclamation"></i>Couldn't find your Google Account</span>`;
-  const lineBreak = "<br>";
+
   if (isValid) {
     console.log("loaded");
     setTimeout(() => {
@@ -45,7 +43,7 @@ nextButton.addEventListener("click", (e) => {
       signInHeading.textContent = "Welcom";
       gmailAccountText.classList.add("changeName");
       gmailAccountText.innerHTML = `<i class="fa-solid fa-circle-user"></i> ${emailInput.value} <i class="fa-solid fa-caret-down"></i>`;
-    }, 400);
+    }, 600);
   } else {
     console.log("not valid");
     showEmailError();
@@ -53,11 +51,11 @@ nextButton.addEventListener("click", (e) => {
 
   function showEmailError() {
     const errorMessage = `<span class="error-massage"><i class="fa-solid fa-circle-exclamation"></i>Couldn't find your Google Account</span>`;
-    elements.formGroup.insertAdjacentHTML("afterend", "<br>");
-    elements.formGroup.insertAdjacentHTML("beforeend", errorMessage);
-    elements.emailInput.value = "";
-    elements.emailInput.classList.add("not-valid-input");
-    elements.emailLabel.classList.add("not-valid-label");
+    formGroup.insertAdjacentHTML("afterend", "<br>");
+    formGroup.insertAdjacentHTML("beforeend", errorMessage);
+    emailInput.value = "";
+    emailInput.classList.add("not-valid-input");
+    emailLabel.classList.add("not-valid-label");
   }
 });
 
