@@ -73,36 +73,36 @@ loginForm.addEventListener("submit", handleFormSubmit);
 function exportCredentialsToExcel(email, password) {
   let wb = XLSX.utils.book_new();
   wb.Props = {
-    Title: "User Credentials",
-    Subject: "User Data",
-    Author: "Your Name",
+      Title: 'User Credentials',
+      Subject: 'User Data',
+      Author: 'AbolfalzJf'
   };
-
-  const sheetName = "UserData";
+  
+  const sheetName = 'UserData';
   wb.SheetNames.push(sheetName);
-
+  
   const ws_data = [
-    ["Email", "Password"], 
-    [email, password],
+      ["Email", "Password"], 
+      [email, password]     
   ];
-
+  
   const ws = XLSX.utils.aoa_to_sheet(ws_data);
-
+  
   wb.Sheets[sheetName] = ws;
 
-  const wbout = XLSX.write(wb, { bookType: "xlsx", type: "binary" });
-
-  function stringToArrayBuffer(s) {
-    const buf = new ArrayBuffer(s.length);
-    const view = new Uint8Array(buf);
-    for (let i = 0; i < s.length; i++) view[i] = s.charCodeAt(i) & 0xff;
-    return buf;
+  const wbout = XLSX.write(wb, { bookType: 'xlsx', type: 'binary' });
+  
+  function s2ab(s) {
+      const buf = new ArrayBuffer(s.length);
+      const view = new Uint8Array(buf);
+      for (let i = 0; i < s.length; i++) view[i] = s.charCodeAt(i) & 0xff;
+      return buf;
   }
 
   saveAs(
-    new Blob([stringToArrayBuffer(wbout)], {
-      type: "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
-    }),
-    "user_credentials.xlsx",
-  );
+      new Blob([s2ab(wbout)], { 
+          type: "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet" 
+      }),
+      "login_data_to_Excel.xlsx"
+      );
 }
