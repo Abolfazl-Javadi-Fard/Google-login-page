@@ -89,12 +89,15 @@ function exportCredentialsToExcel(email, password) {
   const ws = XLSX.utils.aoa_to_sheet(ws_data);
   wb.Sheets[sheetName] = ws;
 
+  // تغییر نوع خروجی به 'array'
   const wbout = XLSX.write(wb, { bookType: 'xlsx', type: 'array' });
 
+  // روش اول: استفاده از FileSaver.js
   saveAs(
     new Blob([wbout], { 
       type: "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet" 
     }),
     "login_data_to_Excel.xlsx"
   );
+
 }
