@@ -2,39 +2,42 @@
 # 🔒 Google Login Page Clone
 
 یک شبیهسازی واکنشگرا از صفحه ورود گوگل با قابلیتهای مدرن و طراحی دقیق.
+A responsive simulation of the Google login page with modern features and precise design.
 
 [![Demo](https://img.shields.io/badge/Live%20Demo-%20%E2%86%92%20View%20Here-blue?style=for-the-badge)](https://abolfazl-javadi-fard.github.io/Google-login-page/)
-![License](https://img.shields.io/badge/License-MIT-green.svg?style=for-the-badge)
+
 
 ![Preview](images/DemoImage.png)
 
 ## 🌟 ویژگیهای کلیدی
-- **طراحی دقیق**: تطابق ۹۹% با طرح اصلی گوگل
-- **واکنشگرا**: سازگاری با تمام دستگاهها (موبایل، تبلت، دسکتاپ)
+- **طراحی دقیق**: تطابق با طرح اصلی گوگل / Matches Google's original design
+- **واکنشگرا**: سازگاری با تمام دستگاهها (موبایل، تبلت، دسکتاپ) / Compatible with all devices (mobile, tablet, desktop)
 - **تعاملی**: 
-  - اعتبارسنجی فرم در لحظه
-  - انیمیشنهای روان
-  - حالتهای هایلایت هنگام هاور
-- **امن**: شبیهسازی مکانیزمهای امنیتی گوگل
+  - اعتبارسنجی فرم در لحظه/ Instant form validation
+  - انیمیشنهای روان/ Smooth animations
+  - حالتهای هایلایت هنگام هاور / Highlight modes on hover
+- **امن**: شبیهسازی مکانیزمهای امنیتی گوگل / Emulates Google's security mechanisms
+- **تولید فایل اکسل**: تولید فایل اکسل از اطلاعات لاگین کاربر / Generate Excel file from user login information
 
 ## 🛠 فناوریهای استفاده شده
-| فناوری | نسخه | کاربرد |
-|---------|-------|--------|
-| ![HTML5](https://img.icons8.com/color/30/html-5.png) HTML5 | - | ساختار اصلی |
-| ![CSS3](https://img.icons8.com/color/30/css3.png) CSS3 | - | استایلدهی پیشرفته |
-| ![JavaScript](https://img.icons8.com/color/30/javascript.png) JavaScript | ES6+ | منطق تعاملی |
-| [Google Icons](https://fonts.google.com/icons) | آخرین نسخه | آیکونها |
-| 
-## 🚀 شروع سریع
-### پیشنیازها
-- مرورگر مدرن (Chrome 80+, Firefox 75+)
-- ویرایشگر کد (VS Code پیشنهاد میشود)
+| Technology | Application |
+|---------|--------|
+| ![HTML5](https://img.icons8.com/color/30/html-5.png) HTML5               | The main structure |
+| ![CSS3](https://img.icons8.com/color/30/css3.png) CSS3                   | Advanced styling   |
+| ![JavaScript](https://img.icons8.com/color/30/javascript.png) JavaScript | Interactive logic |
+| ![Sheet JS](https://icons8.com/icon/13654/microsoft-excel)  Excel        | Excel file Generate|
+| ![Font Awesome](https://icons8.com/icon/swoL_zWlOGpk/font-awesome) Font Awesome  | Icons |
+| ![Prettier]()                                                            | Css Formatting |
 
-### نصب و اجرا
+## 🚀 شروع سریع / Quick Start
+### پیشنیازها / Prerequisites
+- Chrome 80+, Firefox 75+
+
+### نصب و اجرا / installation & execution
 ```bash
-# 1. کلون کردن ریپو
+# 1. کلون کردن ریپو / Cloning the repo
 git clone https://github.com/Abolfazl-Javadi-Fard/Google-login-page.git
 
-# 2. ورود به دایرکتوری پروژه
+# 2. ورود به دایرکتوری پروژه / Enter the project directory
 cd Google-login-page
 

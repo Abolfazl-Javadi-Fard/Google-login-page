@@ -21,7 +21,6 @@
 }
 
 .inner__wrapper {
-  /* min-width: 970px; */
   margin: 4rem 13%;
   border-radius: 30px;
   overflow: hidden;
@@ -80,16 +79,12 @@ form .form-wrapper {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  /* padding: 0px 0px 0px 3rem; */
   transition: 0.5s ease-in-out;
   position: absolute;
   width: 100%;
   padding: 0 3rem;
-  /* box-sizing: border-box; جلوگیری از اضافه شدن padding به عرض */
 }
-form .username {
-  /* padding-right: 3rem; */
-}
+
 form .password {
   left: 100%;
 }
@@ -107,12 +102,6 @@ form .form__group input {
 form .form__group input:valid {
   border: 2px solid var(--secondary-color-d);
 }
-
-/* .error-massage{
-  position: relative;
-    top: -20px;
-    left: 0px;
-} */
 
 .forgot {
   display: block;
@@ -151,7 +140,6 @@ form .form__group input:valid {
   justify-content: space-between;
   flex-direction: row;
   height: 20px;
-  /* margin: 1.5rem 1rem; */
   margin: 0.5rem 13%;
 }
 
@@ -169,7 +157,6 @@ form .form__group input:valid {
   margin: 0px 0rem 0px 2rem;
 }
 
-/* مخفی کردن بخش رمز عبور به صورت پیش‌فرض */
 .form-wrapper .password {
   display: none;
 }

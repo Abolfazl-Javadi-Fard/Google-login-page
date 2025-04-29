@@ -52,7 +52,6 @@ form {
   display: flex;
   flex-direction: row;
   grid-gap: 0;
-
 }
 form .form-wrapper {
   display: flex;

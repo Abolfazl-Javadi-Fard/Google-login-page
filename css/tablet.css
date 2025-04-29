@@ -5,15 +5,12 @@
   --secondary-color-dark: #1a66cb;
 }
 
-/* اکیه */
 .main {
   display: flex;
   flex-direction: column;
   height: 100vh;
   justify-content: flex-start;
-  /* padding:auto 7rem auto 10rem; */
   background-color: var(--secondary-color);
-  /* align-items: center; */
 }
 
 .wrapper {
@@ -27,8 +24,6 @@
 
 .inner__wrapper {
   padding: 3rem 3rem;
-  /* border: 1px solid var(--secondary-color); */
-  /* padding: rem; */
   border-radius: 30px;
   overflow: hidden;
   width: 90%;
@@ -46,7 +41,6 @@
   margin: 0.5rem auto 3rem auto;
   border-radius: 3rem;
   font-size: 16px !important;
-  /* font-weight: bold; */
   font-family: "google sans";
   cursor: pointer;
 }
@@ -96,7 +90,6 @@ form .form__group input:valid {
   font-size: 1.4rem;
   outline: none;
   transition: box-shadow ease 200ms;
-  /* transition: background-color 0s filter 0s; */
   margin-right: 22px;
 }
 
@@ -133,7 +126,6 @@ form .form__group input:valid {
   transform: translateX(-107%);
 }
 
-/* ایجاد چکباکس سفارشی */
 .checkmark {
   display: inline-block;
   width: 20px;
