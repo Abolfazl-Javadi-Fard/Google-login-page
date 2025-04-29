@@ -27,7 +27,7 @@ A responsive simulation of the Google login page with modern features and precis
 | ![JavaScript](https://img.icons8.com/color/30/javascript.png) JavaScript | Interactive logic |
 | ![Sheet JS](https://img.icons8.com/?size=100&id=13654&format=png&color=000000)  Excel        | Excel file Generate|
 | ![Font Awesome](https://img.icons8.com/?size=100&id=swoL_zWlOGpk&format=png&color=000000) Font Awesome  | Icons |
-| ![Prettier]                                                            | Css Formatting |
+| Prettier                                                          | Css Formatting |
 
 ## 🚀 شروع سریع / Quick Start
 ### پیشنیازها / Prerequisites
