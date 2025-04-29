@@ -25,9 +25,9 @@ A responsive simulation of the Google login page with modern features and precis
 | ![HTML5](https://img.icons8.com/color/30/html-5.png) HTML5               | The main structure |
 | ![CSS3](https://img.icons8.com/color/30/css3.png) CSS3                   | Advanced styling   |
 | ![JavaScript](https://img.icons8.com/color/30/javascript.png) JavaScript | Interactive logic |
-| ![Sheet JS](https://icons8.com/icon/13654/microsoft-excel)  Excel        | Excel file Generate|
-| ![Font Awesome](https://icons8.com/icon/swoL_zWlOGpk/font-awesome) Font Awesome  | Icons |
-| ![Prettier]()                                                            | Css Formatting |
+| ![Sheet JS](https://img.icons8.com/?size=100&id=13654&format=png&color=000000)  Excel        | Excel file Generate|
+| ![Font Awesome](https://img.icons8.com/?size=100&id=swoL_zWlOGpk&format=png&color=000000) Font Awesome  | Icons |
+| ![Prettier]                                                            | Css Formatting |
 
 ## 🚀 شروع سریع / Quick Start
 ### پیشنیازها / Prerequisites
